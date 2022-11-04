@@ -18,12 +18,15 @@ public class Variant10 {
 
     /**
      *
-     * @param k is distance in cm
-     * @return distance in m
      */
 
     public int integerNumbersTask(int k) {
-        return 0;
+        String digits = String.valueOf(k);
+        String firstDigit = String.valueOf(digits.charAt(2));
+        String secondDigit = String.valueOf(digits.charAt(1));
+        String stringDigit = firstDigit + secondDigit;
+        int integerNumber = Integer.parseInt(stringDigit);
+        return integerNumber;
     }
 
     /**

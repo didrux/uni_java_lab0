@@ -41,19 +41,18 @@ public class Variant10Test {
 
     ////////////////////////////////////////////////
 
-    @Test(dataProvider = "integerProvider")
-    public void inputTest(int p1, int p3) {
-        assertEquals(new Variant10().integerNumbersTask(p1), p3);
-    }
-
     @DataProvider
-    public Object[][] integerProvider() {
-        return new Object[][] { { 100, 1 }, { 12, 0 }, { 139, 1 } };
+    public Object[][] intTest() {
+        return new Object[][]{
+                {123, 32}
+        };
     }
 
-    @Test(expectedExceptions = AssertionError.class)
-    public void negativeIntegerTest() {
-        new Variant10().integerNumbersTask(-2);
+    @Test(dataProvider = "intTest")
+    public void integer(int a, int b) {
+        int actual = new Variant10().integerNumbersTask(a);
+        int expected = b;
+        assertEquals(actual, expected);
     }
 
     ////////////////////////////////////////////////
