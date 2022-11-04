@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="lab0.Variant10Test" tests="27" skipped="0" failures="9" errors="0" timestamp="2022-11-04T18:09:16" hostname="DESKTOP-TVLHH8O" time="0.058">
+<testsuite name="lab0.Variant10Test" tests="29" skipped="0" failures="9" errors="0" timestamp="2022-11-04T18:50:19" hostname="DESKTOP-TVLHH8O" time="0.061">
   <properties/>
   <testcase name="MassTest" classname="lab0.Variant10Test" time="0.008"/>
-  <testcase name="arrayTest[0]([D@5ab956d7, 0)" classname="lab0.Variant10Test" time="0.002"/>
-  <testcase name="arrayTest[1]([D@2ddc9a9f, 10)" classname="lab0.Variant10Test" time="0.003">
+  <testcase name="arrayTest[0]([D@3e27aa33, 0)" classname="lab0.Variant10Test" time="0.001"/>
+  <testcase name="arrayTest[1]([D@46cdf8bd, 10)" classname="lab0.Variant10Test" time="0.002">
     <failure message="java.lang.AssertionError: expected [10.0] but found [0.0]" type="java.lang.AssertionError">java.lang.AssertionError: expected [10.0] but found [0.0]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEquals(Assert.java:701)
 	at org.testng.Assert.assertEquals(Assert.java:712)
-	at lab0.Variant10Test.arrayTest(Variant10Test.java:133)
+	at lab0.Variant10Test.arrayTest(Variant10Test.java:145)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -58,13 +58,13 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="arrayTest[2]([D@f78a47e, -4)" classname="lab0.Variant10Test" time="0.0">
+  <testcase name="arrayTest[2]([D@1ed4ae0f, -4)" classname="lab0.Variant10Test" time="0.001">
     <failure message="java.lang.AssertionError: expected [-4.0] but found [0.0]" type="java.lang.AssertionError">java.lang.AssertionError: expected [-4.0] but found [0.0]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEquals(Assert.java:701)
 	at org.testng.Assert.assertEquals(Assert.java:712)
-	at lab0.Variant10Test.arrayTest(Variant10Test.java:133)
+	at lab0.Variant10Test.arrayTest(Variant10Test.java:145)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -113,17 +113,19 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="arrayTest2" classname="lab0.Variant10Test" time="0.0"/>
-  <testcase name="booleanTest[0](4, 5, true)" classname="lab0.Variant10Test" time="0.005"/>
+  <testcase name="arrayTest2" classname="lab0.Variant10Test" time="0.001"/>
+  <testcase name="booleanTest[0](4, 5, true)" classname="lab0.Variant10Test" time="0.003"/>
   <testcase name="booleanTest[1](7, 5, false)" classname="lab0.Variant10Test" time="0.0"/>
-  <testcase name="booleanTest[2](101, 103, false)" classname="lab0.Variant10Test" time="0.001"/>
+  <testcase name="booleanTest[2](101, 103, false)" classname="lab0.Variant10Test" time="0.0"/>
   <testcase name="caseTest[0](N, 1, West)" classname="lab0.Variant10Test" time="0.001"/>
   <testcase name="caseTest[1](E, -1, South)" classname="lab0.Variant10Test" time="0.001"/>
   <testcase name="caseTest[2](S, 1, East)" classname="lab0.Variant10Test" time="0.001"/>
-  <testcase name="caseTest[3](W, 0, West)" classname="lab0.Variant10Test" time="0.001"/>
-  <testcase name="ifTest[0](3, 2, 5, 5)" classname="lab0.Variant10Test" time="0.002"/>
+  <testcase name="caseTest[3](W, 0, West)" classname="lab0.Variant10Test" time="0.0"/>
+  <testcase name="forTest[0](2, 1.5)" classname="lab0.Variant10Test" time="0.009"/>
+  <testcase name="forTest[1](20, 3.597739657143682)" classname="lab0.Variant10Test" time="0.001"/>
+  <testcase name="ifTest[0](3, 2, 5, 5)" classname="lab0.Variant10Test" time="0.001"/>
   <testcase name="ifTest[1](20, 20, 0, 0)" classname="lab0.Variant10Test" time="0.001"/>
-  <testcase name="inputTest[0](2, 4)" classname="lab0.Variant10Test" time="0.001">
+  <testcase name="inputTest[0](2, 4)" classname="lab0.Variant10Test" time="0.0">
     <failure message="java.lang.AssertionError: expected [4] but found [0]" type="java.lang.AssertionError">java.lang.AssertionError: expected [4] but found [0]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
@@ -180,7 +182,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="inputTest[1](6, 36)" classname="lab0.Variant10Test" time="0.002">
+  <testcase name="inputTest[1](6, 36)" classname="lab0.Variant10Test" time="0.001">
     <failure message="java.lang.AssertionError: expected [36] but found [0]" type="java.lang.AssertionError">java.lang.AssertionError: expected [36] but found [0]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
@@ -240,8 +242,8 @@
   <testcase name="integerTest[0](123, 32)" classname="lab0.Variant10Test" time="0.0"/>
   <testcase name="negativeInputTest" classname="lab0.Variant10Test" time="0.0"/>
   <testcase name="negativeWhileTest[0](1, 2)" classname="lab0.Variant10Test" time="0.0">
-    <failure message="org.testng.TestException: &#10;Method Variant10Test.negativeWhileTest(int,int)[pri:0, instance:lab0.Variant10Test@b62d79] should have thrown an exception of type class java.lang.AssertionError" type="org.testng.TestException">org.testng.TestException: 
-Method Variant10Test.negativeWhileTest(int,int)[pri:0, instance:lab0.Variant10Test@b62d79] should have thrown an exception of type class java.lang.AssertionError
+    <failure message="org.testng.TestException: &#10;Method Variant10Test.negativeWhileTest(int,int)[pri:0, instance:lab0.Variant10Test@5ace1ed4] should have thrown an exception of type class java.lang.AssertionError" type="org.testng.TestException">org.testng.TestException: 
+Method Variant10Test.negativeWhileTest(int,int)[pri:0, instance:lab0.Variant10Test@5ace1ed4] should have thrown an exception of type class java.lang.AssertionError
 	at app//org.testng.internal.ExpectedExceptionsHolder.noException(ExpectedExceptionsHolder.java:82)
 	at app//org.testng.internal.TestInvoker.considerExceptions(TestInvoker.java:749)
 	at app//org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:634)
@@ -289,15 +291,15 @@ Method Variant10Test.negativeWhileTest(int,int)[pri:0, instance:lab0.Variant10Te
   </testcase>
   <testcase name="negativeWhileTest[1](-2, 1)" classname="lab0.Variant10Test" time="0.0"/>
   <testcase name="negativeWhileTest[2](2, -1)" classname="lab0.Variant10Test" time="0.0"/>
-  <testcase name="twoDimensionArrayTest[0]([[I@3e27ba32, 2, 3, [[I@7ef82753)" classname="lab0.Variant10Test" time="0.001">
-    <failure message="java.lang.AssertionError: Arrays differ at element [1]: [I@1ca3b418 != [I@58cbafc2 (Arrays differ at element [1]: [I@1ca3b418 != [I@58cbafc2) expected [[I@1ca3b418] but found [[I@58cbafc2]" type="java.lang.AssertionError">java.lang.AssertionError: Arrays differ at element [1]: [I@1ca3b418 != [I@58cbafc2 (Arrays differ at element [1]: [I@1ca3b418 != [I@58cbafc2) expected [[I@1ca3b418] but found [[I@58cbafc2]
+  <testcase name="twoDimensionArrayTest[0]([[I@795509d9, 2, 3, [[I@53045c6c)" classname="lab0.Variant10Test" time="0.0">
+    <failure message="java.lang.AssertionError: Arrays differ at element [1]: [I@4be29ed9 != [I@548d708a (Arrays differ at element [1]: [I@4be29ed9 != [I@548d708a) expected [[I@4be29ed9] but found [[I@548d708a]" type="java.lang.AssertionError">java.lang.AssertionError: Arrays differ at element [1]: [I@4be29ed9 != [I@548d708a (Arrays differ at element [1]: [I@4be29ed9 != [I@548d708a) expected [[I@4be29ed9] but found [[I@548d708a]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertArrayEquals(Assert.java:201)
 	at org.testng.Assert.assertEquals(Assert.java:119)
 	at org.testng.Assert.assertEquals(Assert.java:1242)
 	at org.testng.Assert.assertEquals(Assert.java:1302)
-	at lab0.Variant10Test.twoDimensionArrayTest(Variant10Test.java:148)
+	at lab0.Variant10Test.twoDimensionArrayTest(Variant10Test.java:160)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -346,15 +348,15 @@ Method Variant10Test.negativeWhileTest(int,int)[pri:0, instance:lab0.Variant10Te
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="twoDimensionArrayTest[1]([[I@3e27ba32, 1, 4, [[I@2034b64c)" classname="lab0.Variant10Test" time="0.0">
-    <failure message="java.lang.AssertionError: Arrays differ at element [0]: [I@74d1dc36 != [I@235ecd9f (Arrays differ at element [0]: [I@74d1dc36 != [I@235ecd9f) expected [[I@74d1dc36] but found [[I@235ecd9f]" type="java.lang.AssertionError">java.lang.AssertionError: Arrays differ at element [0]: [I@74d1dc36 != [I@235ecd9f (Arrays differ at element [0]: [I@74d1dc36 != [I@235ecd9f) expected [[I@74d1dc36] but found [[I@235ecd9f]
+  <testcase name="twoDimensionArrayTest[1]([[I@795509d9, 1, 4, [[I@4b013c76)" classname="lab0.Variant10Test" time="0.0">
+    <failure message="java.lang.AssertionError: Arrays differ at element [0]: [I@cb0755b != [I@3a7442c7 (Arrays differ at element [0]: [I@cb0755b != [I@3a7442c7) expected [[I@cb0755b] but found [[I@3a7442c7]" type="java.lang.AssertionError">java.lang.AssertionError: Arrays differ at element [0]: [I@cb0755b != [I@3a7442c7 (Arrays differ at element [0]: [I@cb0755b != [I@3a7442c7) expected [[I@cb0755b] but found [[I@3a7442c7]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertArrayEquals(Assert.java:201)
 	at org.testng.Assert.assertEquals(Assert.java:119)
 	at org.testng.Assert.assertEquals(Assert.java:1242)
 	at org.testng.Assert.assertEquals(Assert.java:1302)
-	at lab0.Variant10Test.twoDimensionArrayTest(Variant10Test.java:148)
+	at lab0.Variant10Test.twoDimensionArrayTest(Variant10Test.java:160)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -412,7 +414,7 @@ Method Variant10Test.negativeWhileTest(int,int)[pri:0, instance:lab0.Variant10Te
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:907)
 	at org.testng.Assert.assertEquals(Assert.java:917)
-	at lab0.Variant10Test.whileTest(Variant10Test.java:112)
+	at lab0.Variant10Test.whileTest(Variant10Test.java:124)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -470,7 +472,7 @@ Method Variant10Test.negativeWhileTest(int,int)[pri:0, instance:lab0.Variant10Te
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:907)
 	at org.testng.Assert.assertEquals(Assert.java:917)
-	at lab0.Variant10Test.whileTest(Variant10Test.java:112)
+	at lab0.Variant10Test.whileTest(Variant10Test.java:124)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -526,7 +528,7 @@ My Direction will be: West
 My Direction will be: South
 My Direction will be: East
 My Direction will be: West
-5
+Sum=1.5Sum=3.5977396571436825
 5
 0
 0

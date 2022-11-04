@@ -112,8 +112,11 @@ public class Variant10 {
      * @return approximated value of exp(1)
      */
     public double forTask(int n) {
-        assert n >0: "Argument should be more than zero";
-        return 0;
+        double sum = 0;
+        for (int i = 1; i <= n; i++)
+            sum += 1 / (double)i;
+        System.out.print("Sum=" + sum);
+        return sum;
     }
 
 

@@ -105,6 +105,18 @@ public class Variant10Test {
 
     ///////////////////////////////////////////////////
 
+    @Test(dataProvider = "forProvider")
+    public void forTest(int a, double expected) {
+        assertEquals(new Variant10().forTask(a), expected);
+    }
+
+    @DataProvider
+    public Object[][] forProvider() {
+        return new Object[][] {
+                { 2, 1.5 }, { 20, 3.597739657143682 }
+        };
+    }
+
     //////////////////////////////////////////
 
     @Test(dataProvider = "whileProvider")
