@@ -41,7 +41,7 @@ public class Variant10Test {
         new Variant10().inputOutputTask(-2);
     }
 
-    ////////////////////////////////////////////////
+    ////////////////////////////////////////////////-
 
     @DataProvider
     public Object[][] intProvider() {
@@ -57,19 +57,25 @@ public class Variant10Test {
         assertEquals(actual, expected);
     }
 
-    ////////////////////////////////////////////////
+    ////////////////////////////////////////////////-
 
     @Test(dataProvider = "ifProvider")
-    public void ifTest(int p1, int p3) {
-        assertEquals(new Variant10().ifTask(p1), p3);
+    public void ifTest(int a, int b, int expected1, int expected2) {
+        int[] expected;
+        expected = new int[2];
+
+        expected[0] = expected1;
+        expected[1] = expected2;
+
+        assertEquals(new Variant10().ifTask(a, b), expected);
     }
 
     @DataProvider
     public Object[][] ifProvider() {
-        return new Object[][] { { 2, 3 }, { 0, 0 }, { -3, -3 } };
+        return new Object[][] { { 3, 2, 5, 5}, { 20, 20, 0, 0} };
     }
 
-    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////-
 
     @Test(dataProvider = "booleanProvider")
     public void booleanTest(int a, int b, boolean p3) {
@@ -83,33 +89,18 @@ public class Variant10Test {
         };
     }
 
-    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////-
 
-    @Test(dataProvider = "switchProvider")
-    public void switchTest(int p1, DAY_OF_WEEK p2) {
-        assertEquals(new Variant10().switchTask(p1), p2);
+    @Test(dataProvider = "caseProvider")
+    public void caseTest(String a, int b, String expected) {
+        assertEquals(new Variant10().caseTask(a, b), expected);
     }
 
     @DataProvider
-    public Object[][] switchProvider() {
-        return new Object[][] { { 3, DAY_OF_WEEK.WEDNESDAY }, { 6, 6 } };
-    }
-
-    @Test(expectedExceptions = AssertionError.class)
-    public void switchNegativeTest() {
-        new Variant10().forTask(10);
-    }
-
-    ///////////////////////////////////////////////////
-
-    @Test(dataProvider = "forProvider")
-    public void forTest(int n, double p2) {
-        assertEquals(new Variant10().forTask(n), p2, EPS);
-    }
-
-    @DataProvider
-    public Object[][] forProvider() {
-        return new Object[][] { { 3, 2.666667 }, { 7, 2.718254 }, { 12, 2.718282 } };
+    public Object[][] caseProvider() {
+        return new Object[][] {
+                { "N", 1, "West" }, { "E", -1, "South" }, { "S", 1, "East" }, { "W", 0, "West" }
+        };
     }
 
     ///////////////////////////////////////////////////

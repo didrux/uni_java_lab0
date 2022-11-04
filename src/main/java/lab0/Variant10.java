@@ -1,4 +1,5 @@
 package lab0;
+import java.util.Scanner;
 
 public class Variant10 {
 
@@ -42,21 +43,66 @@ public class Variant10 {
 
     /**
      *
-     * @param parameter is integer number
-     * @return transformed number
      */
-    public int ifTask(int parameter) {
-        return 0;
+    public int[] ifTask(int a, int b) {
+        int[] arr;
+        arr = new int[2];
+        int sum = a+b;
+
+        if (a != b) {
+            a = sum;
+            b = sum;
+        }
+        else {
+            a = 0;
+            b = 0;
+        }
+
+        arr[0] = a;
+        arr[1] = b;
+        System.out.println(arr[0]);
+        System.out.println(arr[1]);
+        return arr;
     }
 
 
     /**
      *
-     * @param number1
-     * @return day of week day represented number1
      */
-    public DAY_OF_WEEK switchTask(int number1) {
-        return DAY_OF_WEEK.MONDAY;
+    public String caseTask(String direct, int n) {
+        String result = "";
+        switch (direct) {
+            case "N":
+                switch (n) {
+                    case 1 -> result = "West";
+                    case 0 -> result = "North";
+                    case -1 -> result = "East";
+                }
+                break;
+            case "E":
+                switch (n) {
+                    case 1 -> result = "North";
+                    case 0 -> result = "East";
+                    case -1 -> result = "South";
+                }
+                break;
+            case "S":
+                switch (n) {
+                    case 1 -> result = "East";
+                    case 0 -> result = "South";
+                    case -1 -> result = "West";
+                }
+                break;
+            case "W":
+                switch (n) {
+                    case 1 -> result = "South";
+                    case 0 -> result = "West";
+                    case -1 -> result = "North";
+                }
+                break;
+        }
+        System.out.println("My Direction will be: " + result);
+        return result;
     }
 
 
