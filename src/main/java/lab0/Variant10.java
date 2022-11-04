@@ -31,11 +31,12 @@ public class Variant10 {
 
     /**
      *
-     * @param number
      * @return true, if number is possitive
      */
-    public boolean booleanTask(int number) {
-        return number > 0;
+    public boolean booleanTask(int a, int b) {
+        boolean res1 = ((a % 2 != 0 && b % 2 == 0) || (a % 2 == 0 && b % 2 != 0));
+        System.out.println(res1);
+        return res1;
     }
 
 

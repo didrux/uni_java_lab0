@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 import lab0.Variant10;
 import lab0.Variant10.DAY_OF_WEEK;
 
+import java.lang.reflect.Array;
+
 public class Variant10Test {
 
     public static double EPS = 0.0000001;
@@ -20,7 +22,7 @@ public class Variant10Test {
     @Test(enabled = false)
     public void loginOld() {
 
-        assertEquals(new Variant10().booleanTask(3), false);
+//        assertEquals(new Variant10().booleanTask(3), false);
 
     }
 
@@ -42,14 +44,14 @@ public class Variant10Test {
     ////////////////////////////////////////////////
 
     @DataProvider
-    public Object[][] intTest() {
+    public Object[][] intProvider() {
         return new Object[][]{
                 {123, 32}
         };
     }
 
-    @Test(dataProvider = "intTest")
-    public void integer(int a, int b) {
+    @Test(dataProvider = "intProvider")
+    public void integerTest(int a, int b) {
         int actual = new Variant10().integerNumbersTask(a);
         int expected = b;
         assertEquals(actual, expected);
@@ -70,13 +72,15 @@ public class Variant10Test {
     //////////////////////////////////////////////////
 
     @Test(dataProvider = "booleanProvider")
-    public void booleanTest(int p1, boolean p3) {
-        assertEquals(new Variant10().booleanTask(p1), p3);
+    public void booleanTest(int a, int b, boolean p3) {
+        assertEquals(new Variant10().booleanTask(a, b), p3);
     }
 
     @DataProvider
     public Object[][] booleanProvider() {
-        return new Object[][] { { 5, true }, { 0, false }, { -3, false } };
+        return new Object[][] {
+                { 4, 5, true }, { 7, 5, false }, { 101, 103, false }
+        };
     }
 
     //////////////////////////////////////////////////
