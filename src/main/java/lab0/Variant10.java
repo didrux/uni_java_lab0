@@ -120,9 +120,23 @@ public class Variant10 {
     }
 
 
-    public int whileTask(int a, int b) {
-        assert (a >0 && b > 0): "Argument should be more than zero";
-        return 0;
+    public int whileTask(int n) {
+        return function(n);
+    }
+    public static int power(int k) {
+        int res = 3, count = 1;
+        while(count < k) {
+            count++;
+            res *= res;
+        }
+        return res;
+    }
+    public static int function(int n) {
+        int k = 1;
+        while (power(k) <= n) {
+            k++;
+        }
+        return k;
     }
 
     public double arrayTask(double[] array) {

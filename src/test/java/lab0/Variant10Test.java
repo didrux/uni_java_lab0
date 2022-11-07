@@ -120,23 +120,13 @@ public class Variant10Test {
     //////////////////////////////////////////
 
     @Test(dataProvider = "whileProvider")
-    public void whileTest(int a, int b, int c) {
-        assertEquals(new Variant10().whileTask(a, b), c);
+    public void whileTest(int a, int c) {
+        assertEquals(new Variant10().whileTask(a), c);
     }
 
     @DataProvider
     public Object[][] whileProvider() {
-        return new Object[][] { { 10, 2, 0 }, { 12, 10, 2 }, { 12, 1, 0 }, { 25, 7, 4 } };
-    }
-
-    @Test(expectedExceptions = AssertionError.class, dataProvider = "negativeWhileProvider")
-    public void negativeWhileTest(int a, int b) {
-        new Variant10().whileTask(a, b);
-    }
-
-    @DataProvider
-    public Object[][] negativeWhileProvider() {
-        return new Object[][] { { 1, 2 }, { -2, 1 }, { 2, -1 } };
+        return new Object[][] { { 100, 4 }, { 20, 3 } };
     }
 
     //////////////////////////////////////////
