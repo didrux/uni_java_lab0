@@ -121,9 +121,9 @@ public class Variant10 {
 
 
     public int whileTask(int n) {
-        return function(n);
+        return functionForWhile(n);
     }
-    public static int power(int k) {
+    public static int powerForWhile(int k) {
         int res = 3, count = 1;
         while(count < k) {
             count++;
@@ -131,17 +131,43 @@ public class Variant10 {
         }
         return res;
     }
-    public static int function(int n) {
+    public static int functionForWhile(int n) {
         int k = 1;
-        while (power(k) <= n) {
+        while (powerForWhile(k) <= n) {
             k++;
         }
         return k;
     }
 
-    public double arrayTask(double[] array) {
-        return 0;
+    public static int[] arrayTask(int[] array, int n) {
+
+        int counter = 0;
+        int[] a = new int[n];
+        int[] newArray = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            a[i] = array[i];
+            System.out.print(a[i] + " ");
+        }
+
+        for (int i = 0; i <= a.length-1; i++) {
+            if (a[i] % 2 == 0) {
+                newArray[counter] = a[i];
+                counter++;
+            }
+        }
+        for (int i = a.length-1; i >= 0; i--) {
+            if (a[i] % 2 != 0) {
+                newArray[counter] = a[i];
+                counter++;
+            }
+        }
+        System.out.print(newArray[0] + " ");
+        System.out.print(newArray[1] + " ");
+        System.out.print(newArray[2] + " ");
+        return newArray;
     }
+
 
     /**
      *
@@ -155,9 +181,14 @@ public class Variant10 {
         return array;
     }
 
+    public static void kek() {
+        System.out.println("fuck you!!!");
+    }
+
     public static void main(String... strings) {
         System.out.println("Start of zero lab");
         System.out.println("Done!!!");
+        System.out.println(arrayTask(new int[] { 13, 2, 6 }, 3));
     }
 
 }
