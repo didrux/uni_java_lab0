@@ -5,41 +5,7 @@ import static org.testng.Assert.assertEquals;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import lab0.Variant10;
-import lab0.Variant10.DAY_OF_WEEK;
-
-import java.lang.reflect.Array;
-
 public class Variant10Test {
-
-    public static double EPS = 0.0000001;
-
-    @Test
-    public void MassTest(){
-        assertEquals(new int[]{1, 2, 3}, new int[]{1, 2, 3});
-    }
-
-    @Test(enabled = false)
-    public void loginOld() {
-
-//        assertEquals(new Variant10().booleanTask(3), false);
-
-    }
-
-    @Test(dataProvider = "inputProvider")
-    public void inputTest(int p1, long p3) {
-        assertEquals(new Variant10().inputOutputTask(p1), p3);
-    }
-
-    @DataProvider
-    public Object[][] inputProvider() {
-        return new Object[][] { { 2, 4l }, { 6, 36L } };
-    }
-
-    @Test(expectedExceptions = AssertionError.class)
-    public void negativeInputTest() {
-        new Variant10().inputOutputTask(-2);
-    }
 
     ////////////////////////////////////////////////-
 

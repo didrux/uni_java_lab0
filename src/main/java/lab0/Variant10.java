@@ -3,23 +3,7 @@ import java.util.Scanner;
 
 public class Variant10 {
 
-    public enum DAY_OF_WEEK{
-        MONDAY, TUESDAY, WEDNESDAY
-    }
 
-    /**
-     *
-     * @param k is square side
-     * @return perimeter
-     */
-    public int inputOutputTask(int k) {
-        assert k > 0: "Parameter k should be more than 0";
-        return 0;
-    }
-
-    /**
-     *
-     */
 
     public int integerNumbersTask(int k) {
         String digits = String.valueOf(k);
