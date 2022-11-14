@@ -171,14 +171,21 @@ public class Variant10 {
 
     /**
      *
-     * @param array
-     * @param k1
-     * @param k2
-     * @return transformed array where row with indexes k1 and k2 was changed
+     * @param array - matrix of integers
+     * @return matrix of rows with even indices
      */
-    public int[][]  twoDimensionArrayTask(int[][] array, int k1, int k2) {
-        //return null;
-        return array;
+    public int[][] twoDimensionArrayTask(int[][] array) {
+        int[][] newArray = new int[array.length / 2][array[0].length];
+        int row = 0;
+
+        for(int i = 0; i < array.length; i+= 2){
+            for (int j = 0; j < array[i].length; j++) {
+                newArray[row][j] = array[i][j];
+            }
+
+            row++;
+        }
+        return newArray;
     }
 
     public static void kek() {

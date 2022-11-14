@@ -145,29 +145,23 @@ public class Variant10Test {
     //////////////////////////////////////////
 
     @Test(dataProvider = "matrixProvider")
-    public void twoDimensionArrayTest(int[][] input, int from, int to, int[][] output) {
-        assertEquals(new Variant10().twoDimensionArrayTask(input, from, to), output);
+    public void twoDimensionArrayTest(int[][] input, int[][] res) {
+        assertEquals(new Variant10().twoDimensionArrayTask(input), res);
     }
 
     @DataProvider
     public Object[][] matrixProvider() {
-        int[][] input = {{2, 3, 6, 9, -9},
-                {34, 98, -9, 2, 1},
-                {-4, 2, 1, 6, 1},
-                {-98, 8, 1, 5, 3}};
+        int[][] input = {{4, 6, 12, 18, -18},
+                {68, 196, -18, 4, 2},
+                {-8, 4, 2, 12, 2},
+                {-196, 16, 2, 10, 6}};
 
-        int[][] input23 = {{2, 3, 6, 9, -9},
-                {-4, 2, 1, 6, 1},
-                {34, 98, -9, 2, 1},
-                {-98, 8, 1, 5, 3}};
+        int[][] input2 = {{2, 4, 6},
+                {8, 10, 12},
+                {14, 16, 19},
+                {20, 22, 24}};
 
-        int[][] input14 = {{-98, 8, 1, 5, 3},
-                {-4, 2, 1, 6, 1},
-                {34, 98, -9, 2, 1},
-                {2, 3, 6, 9, -9}};
-
-        return new Object[][] { {input, 2, 3, input23}, { input, 1,4, input14 } };
-
+        return new Object[][] {{input, new int[][]{ {4, 6, 12, 18, -18}, {-8, 4, 2, 12, 2}}}, {input2, new int[][]{{2, 4, 6}, {14, 16, 19}}}};
     }
 
 }
