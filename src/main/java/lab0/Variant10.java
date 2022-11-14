@@ -1,10 +1,11 @@
 package lab0;
-import java.util.Scanner;
 
 public class Variant10 {
-
-
-
+    /**
+     *
+     * @param k given 3 digits value
+     * @return transformed value
+     */
     public int integerNumbersTask(int k) {
         String digits = String.valueOf(k);
         String firstDigit = String.valueOf(digits.charAt(2));
@@ -14,9 +15,12 @@ public class Variant10 {
         return integerNumber;
     }
 
+
     /**
      *
-     * @return true, if number is possitive
+     * @param a integral number
+     * @param b integral number
+     * @return boolean result
      */
     public boolean booleanTask(int a, int b) {
         boolean res1 = ((a % 2 != 0 && b % 2 == 0) || (a % 2 == 0 && b % 2 != 0));
@@ -27,6 +31,9 @@ public class Variant10 {
 
     /**
      *
+     * @param a
+     * @param b
+     * @return arr with new values
      */
     public int[] ifTask(int a, int b) {
         int[] arr;
@@ -52,6 +59,9 @@ public class Variant10 {
 
     /**
      *
+     * @param direct first direction of the robot
+     * @param n digital command
+     * @return result of the robot direction
      */
     public String caseTask(String direct, int n) {
         String result = "";
@@ -92,8 +102,8 @@ public class Variant10 {
 
     /**
      *
-     * @param n is integer number
-     * @return approximated value of exp(1)
+     * @param n given value
+     * @return sum result
      */
     public double forTask(int n) {
         double sum = 0;
@@ -104,6 +114,11 @@ public class Variant10 {
     }
 
 
+    /**
+     *
+     * @param n given value
+     * @return the biggest K
+     */
     public int whileTask(int n) {
         return functionForWhile(n);
     }
@@ -123,6 +138,13 @@ public class Variant10 {
         return k;
     }
 
+
+    /**
+     *
+     * @param array given array
+     * @param n given value of size of the array
+     * @return transformed array
+     */
     public static int[] arrayTask(int[] array, int n) {
 
         int counter = 0;
@@ -155,8 +177,8 @@ public class Variant10 {
 
     /**
      *
-     * @param array - matrix of integers
-     * @return matrix of rows with even indices
+     * @param array - matrix of int's
+     * @return matrix of rows with odd's
      */
     public int[][] twoDimensionArrayTask(int[][] array) {
         int[][] newArray = new int[array.length / 2][array[0].length];
@@ -172,14 +194,9 @@ public class Variant10 {
         return newArray;
     }
 
-    public static void kek() {
-        System.out.println("fuck you!!!");
-    }
-
     public static void main(String... strings) {
         System.out.println("Start of zero lab");
         System.out.println("Done!!!");
-        System.out.println(arrayTask(new int[] { 13, 2, 6 }, 3));
     }
 
 }
