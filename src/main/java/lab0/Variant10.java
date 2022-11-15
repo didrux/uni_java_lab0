@@ -23,9 +23,7 @@ public class Variant10 {
      * @return boolean result
      */
     public boolean booleanTask(int a, int b) {
-        boolean res1 = ((a % 2 != 0 && b % 2 == 0) || (a % 2 == 0 && b % 2 != 0));
-        System.out.println(res1);
-        return res1;
+        return ((a % 2 != 0 && b % 2 == 0) || (a % 2 == 0 && b % 2 != 0));
     }
 
 
@@ -51,8 +49,6 @@ public class Variant10 {
 
         arr[0] = a;
         arr[1] = b;
-        System.out.println(arr[0]);
-        System.out.println(arr[1]);
         return arr;
     }
 
@@ -95,7 +91,7 @@ public class Variant10 {
                 }
                 break;
         }
-        System.out.println("My Direction will be: " + result);
+
         return result;
     }
 
@@ -109,7 +105,7 @@ public class Variant10 {
         double sum = 0;
         for (int i = 1; i <= n; i++)
             sum += 1 / (double)i;
-        System.out.print("Sum=" + sum);
+
         return sum;
     }
 
@@ -122,7 +118,7 @@ public class Variant10 {
     public int whileTask(int n) {
         return functionForWhile(n);
     }
-    public static int powerForWhile(int k) {
+    private static int powerForWhile(int k) {
         int res = 3, count = 1;
         while(count < k) {
             count++;
@@ -130,7 +126,7 @@ public class Variant10 {
         }
         return res;
     }
-    public static int functionForWhile(int n) {
+    private static int functionForWhile(int n) {
         int k = 1;
         while (powerForWhile(k) <= n) {
             k++;
@@ -145,32 +141,30 @@ public class Variant10 {
      * @param n given value of size of the array
      * @return transformed array
      */
-    public static int[] arrayTask(int[] array, int n) {
+    public static int[] arrayTask(int[] array) {
 
-        int counter = 0;
-        int[] a = new int[n];
+        int n = array.length;
+        int[] temporary = new int[n];
         int[] newArray = new int[n];
 
         for (int i = 0; i < n; i++) {
-            a[i] = array[i];
-            System.out.print(a[i] + " ");
+            temporary[i] = array[i];
         }
 
-        for (int i = 0; i <= a.length-1; i++) {
-            if (a[i] % 2 == 0) {
-                newArray[counter] = a[i];
+        int counter = 0;
+        for (int i = 0; i <= temporary.length-1; i++) {
+            if (temporary[i] % 2 == 0) {
+                newArray[counter] = temporary[i];
                 counter++;
             }
         }
-        for (int i = a.length-1; i >= 0; i--) {
-            if (a[i] % 2 != 0) {
-                newArray[counter] = a[i];
+        for (int i = temporary.length-1; i >= 0; i--) {
+            if (temporary[i] % 2 != 0) {
+                newArray[counter] = temporary[i];
                 counter++;
             }
         }
-        System.out.print(newArray[0] + " ");
-        System.out.print(newArray[1] + " ");
-        System.out.print(newArray[2] + " ");
+
         return newArray;
     }
 

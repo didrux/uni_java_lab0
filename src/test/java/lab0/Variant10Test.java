@@ -97,13 +97,13 @@ public class Variant10Test {
 
     //////////////////////////////////////////
     @Test(dataProvider = "arrayProvider")
-    public void arrayTest(int[] array, int value, int[] newArray) {
-        assertEquals(new Variant10().arrayTask(array, value), newArray);
+    public void arrayTest(int[] array, int[] newArray) {
+        assertEquals(new Variant10().arrayTask(array), newArray);
     }
 
     @DataProvider
     public Object[][] arrayProvider() {
-        return new Object[][] { { new int[] { 10, 2, 3 }, 3, new int[] { 10, 2, 3 } }, { new int[] { 13, 2, 6 }, 3, new int[] { 2, 6, 13 } } };
+        return new Object[][] { { new int[] { 10, 2, 3 }, new int[] { 10, 2, 3 } }, { new int[] { 13, 2, 6 }, new int[] { 2, 6, 13 } }, { new int[] { 1, 3, 4, 2 }, new int[] { 4, 2, 3, 1 } } };
     }
 
 
